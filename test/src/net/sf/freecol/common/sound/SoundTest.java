@@ -64,7 +64,7 @@ public class SoundTest extends FreeColTestCase {
     }
 
     //private void playSound(String id) {
-        File file = ResourceManager.getAudio(id);
+        //File file = ResourceManager.getAudio(id);
         assertNotNull("No sound resource: " + id, file);
         try {
             soundPlayer.playOnce(file);
@@ -78,13 +78,13 @@ public class SoundTest extends FreeColTestCase {
         }
     }
 
-    public void testSound() {
+    //public void testSound() {
         // these sounds are base resources, and should be enough for a test
         playSound("sound.intro.general");
         // other sounds require loading a rule set
     }
 
-    public void testClassic() {
+    //public void testClassic() {
         try {
             FreeColTcFile tcData = new FreeColTcFile("classic");
             ResourceManager.setTcMapping(tcData.getResourceMapping());
